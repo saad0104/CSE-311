@@ -1,3 +1,8 @@
+// First Pattern Matching Algorithm
+// Slow Algortihm
+// Naive Algorithm
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
