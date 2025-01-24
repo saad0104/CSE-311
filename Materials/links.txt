@@ -3,3 +3,8 @@
 L.C.S.  -->  
             https://www.youtube.com/watch?v=sSno9rV8Rhg
             https://www.programiz.com/dsa/longest-common-subsequence
+
+Merge Sort -->
+            https://www.programiz.com/dsa/merge-sort 
+            http://w3schools.com/dsa/dsa_algo_mergesort.php 
+            https://www.youtube.com/watch?v=mB5HXBb_HY8          
