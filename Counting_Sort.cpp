@@ -1,14 +1,12 @@
 // Counting Sort
-
-// Counting sort is a sorting algorithm that sorts the elements of an array 
+//  Counting sort is a sorting algorithm that sorts the elements of an array 
 // by counting the number of occurrences of each unique element in the array.
 
 
 // O(n+k)  
 //  n -> length of array, k = highest element value
 
-// Stable
-// When values of the array are very small.
+// Stablen values of the array are very small.
 
 // ***Algorithm ***
 
