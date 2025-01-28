@@ -8,7 +8,7 @@
 //  can be applied when list is small, checking of all the elements is compulsory
 
 
-// ** Algorithm **
+// *** Algorithm ***
 
 // selectionSort(array, size)
 //   for i from 0 to size - 1 do
