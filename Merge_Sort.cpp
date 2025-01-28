@@ -4,8 +4,23 @@
 //            divide the array into two halves,
 //           sort each half, and then merge the sorted halves back together.
 
+
 // O(nlogn)
 // preferred algorithm for sorting Linked lists.
+
+
+// *** Algorithm ***
+
+// MergeSort(A, p, r):
+//     if p > r 
+//         return
+//     q = (p+r)/2
+//     mergeSort(A, p, q)
+//     mergeSort(A, q+1, r)
+//     merge(A, p, q, r)
+
+
+
 
 #include <bits/stdc++.h>
 using namespace std;

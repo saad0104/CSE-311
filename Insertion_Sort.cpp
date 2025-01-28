@@ -1,9 +1,27 @@
+// Insertion Sort
 // Insertion sort is a sorting algorithm that places an unsorted
 //      element at its suitable place in each iteration.
 
-// O(n^2)
 
+// O(n^2)
 // Use Case - Small Array, few elements left to be sorted
+
+
+
+//  *** Algorithm ***
+
+// insertionSort(array)
+//   mark first element as sorted
+//   for each unsorted element X
+//     'extract' the element X
+//     for j <- lastSortedIndex down to 0
+//       if current element j > X
+//         move sorted element to the right by 1
+//     break loop and insert X here
+// end insertionSort
+
+
+
 
 #include <bits/stdc++.h>
 using namespace std;
