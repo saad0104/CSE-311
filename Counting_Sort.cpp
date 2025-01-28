@@ -4,9 +4,9 @@
 
 
 // O(n+k)  
-//  n -> length of array, k = highest element value
+//  n -> length of array, k = max element value
 
-// Stablen values of the array are very small.
+// Stable, values of the array are very small.
 
 // ***Algorithm ***
 
