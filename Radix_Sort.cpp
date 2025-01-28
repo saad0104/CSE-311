@@ -44,6 +44,8 @@ int getMax(int array[], int size)
     return max;
 }
 
+
+// has to be a stable sorting algo
 void CountingSort(int arr[], int size, int place)
 {
     const int max = 10;
