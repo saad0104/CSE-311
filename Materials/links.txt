@@ -8,3 +8,22 @@ Merge Sort -->
             https://www.programiz.com/dsa/merge-sort 
             http://w3schools.com/dsa/dsa_algo_mergesort.php 
             https://www.youtube.com/watch?v=mB5HXBb_HY8          
+
+Insertion Sort -->>
+            https://www.youtube.com/watch?v=JU767SDMDvA
+            https://www.programiz.com/dsa/insertion-sort
+
+Selection Sort -->>
+            https://www.programiz.com/dsa/selection-sort
+
+Counting Sort  -->>
+            https://www.programiz.com/dsa/counting-sort
+            https://www.youtube.com/watch?v=OKd534EWcdk
+
+Radix Sort  -->>
+            https://www.programiz.com/dsa/radix-sort
+            https://www.youtube.com/watch?v=XiuSW_mEn7g
+
+Bucket Sort  -->>
+            https://www.geeksforgeeks.org/bucket-sort-2/
+            https://www.youtube.com/watch?v=NvZG0dZ60RQ

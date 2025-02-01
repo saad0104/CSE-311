@@ -1,7 +1,7 @@
 // First Pattern Matching Algorithm
 // Slow Algortihm
 // Naive Algorithm
-
+// O(n*m)  -> n - string size, m- pattern size
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -18,7 +18,7 @@
 //   for all the buckets 
 //     sort elements in each bucket
 //   gather elements from each bucket
-// end bucketSort
+//   end bucketSort
 
 
 
