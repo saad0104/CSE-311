@@ -78,8 +78,10 @@ void CountingSort(int arr[], int size, int place)
 }
 
 
-void RadixSort(int arr[], int size)
+// void RadixSort(int arr[], int size)
+void RadixSort(vector<int>&arr)
 {
+    int size = arr.size();
     int max = getMax(arr, size);
 
     for (int place = 1; max / place > 0; place *= 10)
@@ -98,10 +100,13 @@ void printArray(int arr[], int size) {
 
 int main()
 {
-    int arr[] = {121, 432, 456, 345, 432, 123, 9};
-    int size = sizeof(arr) / sizeof(arr[0]);
+    // int arr[] = {121, 432, 456, 345, 432, 123, 9};
+    // int size = sizeof(arr) / sizeof(arr[0]);
+    // RadixSort(arr, size);
 
-    RadixSort(arr, size);
+
+vector<int> arr = {121, 432, 456, 345, 432, 123, 9};
+
     cout << "Sorted Array:" << endl;
     printArray(arr, size);
 

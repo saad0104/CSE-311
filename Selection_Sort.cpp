@@ -1,12 +1,11 @@
 // Selection Sort
 
-// Selection sort is a sorting algorithm that selects the smallest element 
-// from an unsorted list in each iteration and places that 
+// Selection sort is a sorting algorithm that selects the smallest element
+// from an unsorted list in each iteration and places that
 // element at the beginning of the unsorted list.
 
 // O(n^2)
 //  can be applied when list is small, checking of all the elements is compulsory
-
 
 // *** Algorithm ***
 
@@ -20,15 +19,13 @@
 //       swap array[i] with array[current minimum]
 // end selectionSort
 
-
-
-
 #include <bits/stdc++.h>
 using namespace std;
 
-void SelectionSort(int arr[], int size)
+// void SelectionSort(int arr[], int size)
+void SelectionSort(vector<int> &arr)
 {
-
+    int size = arr.size();
     for (int i = 0; i < size - 1; i++)
     {
         int min = i;
@@ -45,8 +42,10 @@ void SelectionSort(int arr[], int size)
     }
 }
 
-void printArray(int arr[], int size)
+// void printArray(int arr[], int size)
+void printArray(vector<int> &arr)
 {
+    int size = arr.size();
     for (int i = 0; i < size; i++)
     {
         cout << arr[i] << " ";
@@ -56,13 +55,16 @@ void printArray(int arr[], int size)
 
 int main()
 {
-    int arr[] = {20, 12, 10, 15, 2};
-    int size = sizeof(arr) / sizeof(arr[0]);
+    // int arr[] = {20, 12, 10, 15, 2};
+    // int size = sizeof(arr) / sizeof(arr[0]);
+    // SelectionSort(arr, size);
+    // printArray(arr, size);
 
-    SelectionSort(arr, size);
+    vector<int> vc = {20, 12, 10, 15, 2};
 
+    SelectionSort(vc);
     cout << "Sorted Array : " << endl;
-    printArray(arr, size);
+    printArray(vc);
 
     return 0;
 }
