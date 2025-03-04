@@ -59,6 +59,10 @@ public:
         else
             return false;
     }
+    void destroy()
+    {
+        top = -1;
+    }
 };
 
 int main()
@@ -73,6 +77,7 @@ int main()
     // st.pop();
 
     // cout << st.peek() << endl;
+    // st.destroy();
 
     while(!st.empty())
     {

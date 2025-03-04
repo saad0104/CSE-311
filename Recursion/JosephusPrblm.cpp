@@ -13,9 +13,9 @@ int Josephus(int n, int k)
 int main()
 {
     int n, k;
-    // cin >> n >> k;
-    n = 9;
-    k = 2;
+    cin >> n >> k;
+    // n = 9;
+    // k = 2;
     cout << Josephus(n, k) + 1 << endl;
     // + 1 for 1 based indexing
 
