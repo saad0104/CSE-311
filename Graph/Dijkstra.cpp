@@ -1,73 +1,77 @@
+// babbar
+
 #include <bits/stdc++.h>
 using namespace std;
-#define INF 0x3f3f3f3f
 
-class Graph
-{
-
-    int V;
-    list<pair<int, int>> *adj;
-
-public:
-    Graph(int V);
-
-    void addEdge(int u, int v, int w);
-
-    pair<int, int> shortestPath(int source, int target);
-};
-
-Graph::Graph(int V)
-{
-    this->V = V;
-    adj = new list<pair<int, int>>[V];
-}
-
-void Graph::addEdge(int u, int v, int w)
+void addEdge(unordered_map<int, list<pair<int, int>>> &adj, int u, int v, int w)
 {
     adj[u].push_back(make_pair(v, w));
     adj[v].push_back(make_pair(u, w));
 }
-pair<int, int> Graph::shortestPath(int src, int tar)
+
+vector<int> Dijkstra(unordered_map<int, list<pair<int, int>>> &adj, int size, int source)
 {
-    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+    vector<int> dist(size, INT32_MAX);
+    set<pair<int, int>> st;
 
-    vector<int> dist(V, INF);
-    pq.push(make_pair(0, src));
-    dist[src] = 0;
-    while (!pq.empty())
+    dist[source] = 0;
+    st.insert(make_pair(0, source));
+
+    while (!st.empty())
     {
-        int u = pq.top().second;
-        pq.pop();
+        // fetch top record
+        auto top = *(st.begin());
 
-        list<pair<int, int>>::iterator i;
-        for (i = adj[u].begin(); i != adj[u].end(); ++i)
+        int nodeDistance = top.first;
+        int topNode = top.second;
+
+        // remove top record
+        st.erase(st.begin());
+
+        // traverse top neighbours
+
+        for (auto neighbour : adj[topNode])
         {
-            int v = (*i).first;
-            int weight = (*i).second;
-            if (dist[v] > dist[u] + weight)
+            if (nodeDistance + neighbour.second < dist[neighbour.first])
             {
-                dist[v] = dist[u] + weight;
-                pq.push(make_pair(dist[v], v));
+                auto record = st.find(make_pair(dist[neighbour.first], neighbour.first));
+
+                // if record found
+                if (record != st.end())
+                {
+                    st.erase(record);
+                }
+
+                // distance update
+
+                dist[neighbour.first] = nodeDistance + neighbour.second;
+
+                st.insert(make_pair(dist[neighbour.first], neighbour.first));
             }
         }
     }
-    return make_pair(tar, dist[tar]);
+    return dist;
 }
 
 int main()
 {
-    int node, edge;
-    cin >> node >> edge;
 
-    Graph g(node + 1);
+    int size = 5;
+    int source = 0;
+    unordered_map<int, list<pair<int, int>>> adj;
 
-    for (int i = 0; i < edge; i++)
+    addEdge(adj, 2, 1, 3);
+    addEdge(adj, 2, 0, 1);
+    addEdge(adj, 1, 0, 7);
+    addEdge(adj, 1, 3, 5);
+    addEdge(adj, 1, 4, 1);
+    addEdge(adj, 3, 4, 7);
+    addEdge(adj, 0, 3, 2);
+
+    for (auto it : Dijkstra(adj, size, source))
     {
-        int u, v, w;
-        cin >> u >> v >> w;
-        g.addEdge(u, v, w);
+        cout << it << " ";
     }
-    cout << g.shortestPath(1,3).first << "\t" << g.shortestPath(1,3).second << endl;
 
     return 0;
 }

@@ -25,7 +25,7 @@ int main()
     // Create a graph with 4 vertices and no edges
     // Note that all values are initialized as 0
     int V = 4;
-    vector<vector<int>> mat(V, vector<int>(V, INFINITY));   // Creats a matrix mat with size V ans rows of vector size of V with all elements 0. v*v size matrix.
+    vector<vector<int>> mat(V, vector<int>(V, INFINITY));   // Creats a matrix mat with size V and rows of vector size of V with all elements 0. v*v size matrix.
 
 
     // Now add edges one by one

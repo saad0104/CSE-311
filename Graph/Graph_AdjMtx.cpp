@@ -6,7 +6,7 @@ using namespace std;
 void addEdge(vector<vector<int>> &mat, int i, int j)
 {
     mat[i][j] = 1;
-    mat[j][i] = 1; // Since the graph is undirected
+    mat[j][i] = 1; // Since the graph is undirected if [a][b] =1 , then [b][a] = 1;
 }
 
 void displayMatrix(vector<vector<int>> &mat)

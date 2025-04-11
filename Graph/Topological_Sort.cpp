@@ -4,7 +4,6 @@ void fastio()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    ;
 }
 
 void topsort(int node, vector<bool> &visited, stack<int> &s, unordered_map<int, list<int>> &adj)
